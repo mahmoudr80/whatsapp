@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "78644299912",
+    "project_id": "flutter-course-a833c",
+    "storage_bucket": "flutter-course-a833c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78644299912:android:60408fd092b101e819373d",
+        "android_client_info": {
+          "package_name": "com.example.whatsapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4KVLVEnK6onpzF7HZWyNRFfzagdjFqxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

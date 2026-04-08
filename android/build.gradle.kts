@@ -1,3 +1,12 @@
+
+plugins {
+    id("com.android.application") apply false
+    id("com.android.library")  apply false
+    kotlin("android") apply false
+    // Add the dependency for the Google services Gradle plugin
+    id("com.google.gms.google-services") apply false
+}
+
 allprojects {
     repositories {
         google()
