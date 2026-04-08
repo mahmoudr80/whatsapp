@@ -5,6 +5,7 @@ class AppColors {
  static final Color receivedMessageBackColor=Color(0xffFAFAFA);
  static final Color seenTextColor=Color(0xff000000).withAlpha(63);
  static final Color seenIconColor=Color(0xff3497F9);
+ static final Color navBarBackColor=Color(0xffF6F6F6);
  static final Color primaryRedColor=Color(0xffFF3B30);
  static final Color seenPrimaryBlueColor=Color(0xff007AFF).withAlpha(63);
 }
