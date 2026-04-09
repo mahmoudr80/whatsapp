@@ -42,6 +42,9 @@ setState(() {
       return currentValue;
     }
     else{
+      setState(() {
+
+      });
       return currentValue;
     }
     }

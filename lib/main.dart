@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:whatsapp/core/theme/app_colors.dart';
+import 'package:whatsapp/feature/authorization/authorization_screen.dart';
 import 'package:whatsapp/feature/chat/presentation/chat_screen.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(backgroundColor: Colors.white,)
         ),
         home:
-        ChatScreen(),
+        AuthorizationScreen(),
       ),
     );
   }

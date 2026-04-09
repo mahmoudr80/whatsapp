@@ -31,7 +31,7 @@ class SignInForm extends StatelessWidget {
               Text(
                 country?.name??"United States",
                 style: AppTheme.textButtonStyle.copyWith(
-                  color: AppColors.PrimaryBlueColor,
+                  color: AppColors.primaryBlueColor,
                 ),
               ),
               Icon(Icons.arrow_forward_ios, color: AppColors.primaryGreyColor),
@@ -79,7 +79,7 @@ class SignInForm extends StatelessWidget {
                 style: AppTheme.textPhoneStyle.copyWith(color: Colors.black),
                 cursorHeight: 34.h,
                 cursorWidth: 2.w,
-                cursorColor: AppColors.PrimaryBlueColor,
+                cursorColor: AppColors.primaryBlueColor,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.symmetric(horizontal: 10.w),
                   hintText: "phone number",

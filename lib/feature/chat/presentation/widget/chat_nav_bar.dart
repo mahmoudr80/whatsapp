@@ -15,7 +15,7 @@ class ChatNavBar extends StatelessWidget {
       child: Row(
         spacing: 25.w,
         children: [
-          SvgPicture.asset(Assets.icons.addIcon),
+         SvgPicture.asset(Assets.icons.addIcon),
           Expanded(
             child: TextFormField(
               decoration: InputDecoration(
@@ -36,8 +36,8 @@ class ChatNavBar extends StatelessWidget {
               )
             ),
           ),
-          SvgPicture.asset(Assets.icons.activeCameraIcon),
-          SvgPicture.asset(Assets.icons.micIcon),
+         SvgPicture.asset(Assets.icons.activeCameraIcon),
+         SvgPicture.asset(Assets.icons.micIcon),
         ],
       ),
     );

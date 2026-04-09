@@ -5,6 +5,7 @@ import 'package:whatsapp/core/theme/app_theme.dart';
 
 import '../../../../gen/assets.gen.dart';
 
+
 class ChatAppBar extends StatelessWidget {
   const ChatAppBar({super.key});
 
@@ -29,8 +30,8 @@ class ChatAppBar extends StatelessWidget {
               ],
             ),
           ),
-          IconButton(onPressed: () {}, icon:SvgPicture.asset(Assets.icons.videoCallIcon),),
-          IconButton(onPressed: () {}, icon:SvgPicture.asset(Assets.icons.callIcon),),
+        IconButton(onPressed: () {}, icon:SvgPicture.asset(Assets.icons.videoCallIcon),),
+          IconButton(onPressed: () {}, icon:SvgPicture.asset(Assets.icons.activeCallIcon),),
         ],
       ),
     );

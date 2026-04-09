@@ -24,7 +24,7 @@ final void Function()?tapped;
               else if(states.contains(WidgetState.pressed)){
                 return AppColors.primaryPurpleColor;
               }
-              return AppColors.PrimaryBlueColor;
+              return AppColors.primaryBlueColor;
             },)),
         child:Text("data",style: TextStyle(fontSize: 17.sp),)
 
