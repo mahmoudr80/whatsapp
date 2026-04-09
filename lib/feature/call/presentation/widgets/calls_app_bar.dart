@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../gen/assets.gen.dart';
+
 class CallsAppBar extends StatelessWidget {
   final int selectedSegment;
   final ValueChanged<int> onSegmentChanged;
@@ -18,7 +20,7 @@ class CallsAppBar extends StatelessWidget {
       child: Row(
         children: [
           Text("Edit", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 17, color: Colors.blue)),
-          SizedBox(width: 66),
+         Spacer(),
           // ALL
           InkWell(
             onTap: () => onSegmentChanged(0),
@@ -51,8 +53,8 @@ class CallsAppBar extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 72),
-          SvgPicture.asset("assets/icons/Call_Icon.svg", width: 24, height: 24),
+        Spacer(),
+          SvgPicture.asset(Assets.icons.activeCallIcon, width: 24, height: 24),
         ],
       ),
     );
