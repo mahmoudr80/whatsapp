@@ -32,23 +32,23 @@ class $AssetsIconsGen {
   /// File path: assets/icons/background_chat_img.svg
   String get backgroundChatImg => 'assets/icons/background_chat_img.svg';
 
-  /// File path: assets/icons/cameraIcon.svg
-  String get cameraIconSvg => 'assets/icons/cameraIcon.svg';
-
-  /// File path: assets/icons/camera_icon.svg
-  String get cameraIconSvg_ => 'assets/icons/camera_icon.svg';
-
   /// File path: assets/icons/chatIcon.svg
   String get chatIcon => 'assets/icons/chatIcon.svg';
 
   /// File path: assets/icons/in_activeIcon.svg
   String get inActiveIcon => 'assets/icons/in_activeIcon.svg';
 
+  /// File path: assets/icons/in_active_cameraIcon.svg
+  String get inActiveCameraIcon => 'assets/icons/in_active_cameraIcon.svg';
+
   /// File path: assets/icons/inactive_call_Icon.svg
   String get inactiveCallIcon => 'assets/icons/inactive_call_Icon.svg';
 
   /// File path: assets/icons/inactive_cameraIcon.svg
   String get inactiveCameraIcon => 'assets/icons/inactive_cameraIcon.svg';
+
+  /// File path: assets/icons/infoIcon.svg
+  String get infoIcon => 'assets/icons/infoIcon.svg';
 
   /// File path: assets/icons/mic_icon.svg
   String get micIcon => 'assets/icons/mic_icon.svg';
@@ -83,12 +83,12 @@ class $AssetsIconsGen {
     addIcon,
     arrowBackIcon,
     backgroundChatImg,
-    cameraIconSvg,
-    cameraIconSvg_,
     chatIcon,
     inActiveIcon,
+    inActiveCameraIcon,
     inactiveCallIcon,
     inactiveCameraIcon,
+    infoIcon,
     micIcon,
     navBarCallIcon,
     posterIcon,
