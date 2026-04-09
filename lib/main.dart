@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,7 +9,14 @@ import 'package:whatsapp/feature/chat/presentation/chat_screen.dart';
 import 'package:whatsapp/feature/nav_screen/cubit/navigation_cubit.dart';
 import 'package:whatsapp/feature/nav_screen/navigation_screen.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main()async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

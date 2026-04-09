@@ -47,31 +47,31 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDfK99KzDbBqxugdGPMO9LiU1SFJFYp5-g',
-    appId: '1:78644299912:web:9c89a158e039279319373d',
-    messagingSenderId: '78644299912',
-    projectId: 'flutter-course-a833c',
-    authDomain: 'flutter-course-a833c.firebaseapp.com',
-    storageBucket: 'flutter-course-a833c.firebasestorage.app',
-    measurementId: 'G-RKYQ4WY25P',
+    apiKey: 'AIzaSyD460_aTl94SHlLDQiRNiggXr1MXPlMxiM',
+    appId: '1:645394368789:web:cc7f303c6fd07e9faa811c',
+    messagingSenderId: '645394368789',
+    projectId: 'whats-app-f8576',
+    authDomain: 'whats-app-f8576.firebaseapp.com',
+    storageBucket: 'whats-app-f8576.firebasestorage.app',
+    measurementId: 'G-5877ZP8REX',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB4KVLVEnK6onpzF7HZWyNRFfzagdjFqxI',
-    appId: '1:78644299912:android:60408fd092b101e819373d',
-    messagingSenderId: '78644299912',
-    projectId: 'flutter-course-a833c',
-    storageBucket: 'flutter-course-a833c.firebasestorage.app',
+    apiKey: 'AIzaSyBwQADdtOcdZ2olFaGPb8gni307mRWmy3Y',
+    appId: '1:645394368789:android:f25734d3ab5d377baa811c',
+    messagingSenderId: '645394368789',
+    projectId: 'whats-app-f8576',
+    storageBucket: 'whats-app-f8576.firebasestorage.app',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDfK99KzDbBqxugdGPMO9LiU1SFJFYp5-g',
-    appId: '1:78644299912:web:59b55e02d1861a6419373d',
-    messagingSenderId: '78644299912',
-    projectId: 'flutter-course-a833c',
-    authDomain: 'flutter-course-a833c.firebaseapp.com',
-    storageBucket: 'flutter-course-a833c.firebasestorage.app',
-    measurementId: 'G-X6DD1JQEK8',
+    apiKey: 'AIzaSyD460_aTl94SHlLDQiRNiggXr1MXPlMxiM',
+    appId: '1:645394368789:web:d92744ab7ecef844aa811c',
+    messagingSenderId: '645394368789',
+    projectId: 'whats-app-f8576',
+    authDomain: 'whats-app-f8576.firebaseapp.com',
+    storageBucket: 'whats-app-f8576.firebasestorage.app',
+    measurementId: 'G-BR3S0WPR0P',
   );
 
 }

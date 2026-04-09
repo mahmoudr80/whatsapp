@@ -45,6 +45,7 @@ dependencies:
   firebase_core: ^4.6.0
   flutter_gen: ^5.13.0+1
   flutter_gen_runner: ^5.13.0+1
+  firebase_auth: ^6.3.0
 
 
 dev_dependencies:
