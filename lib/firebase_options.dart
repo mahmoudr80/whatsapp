@@ -47,31 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD460_aTl94SHlLDQiRNiggXr1MXPlMxiM',
-    appId: '1:645394368789:web:cc7f303c6fd07e9faa811c',
-    messagingSenderId: '645394368789',
-    projectId: 'whats-app-f8576',
-    authDomain: 'whats-app-f8576.firebaseapp.com',
-    storageBucket: 'whats-app-f8576.firebasestorage.app',
-    measurementId: 'G-5877ZP8REX',
+    apiKey: 'AIzaSyCDRBioz62d3ulUrBB6O1-ks4DLz3kSlYQ',
+    appId: '1:641001065746:web:85e6ab3ab640274c6f77cb',
+    messagingSenderId: '641001065746',
+    projectId: 'whatsapp-clone-e9899',
+    authDomain: 'whatsapp-clone-e9899.firebaseapp.com',
+    storageBucket: 'whatsapp-clone-e9899.firebasestorage.app',
+    measurementId: 'G-7YNFLCR121',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBwQADdtOcdZ2olFaGPb8gni307mRWmy3Y',
-    appId: '1:645394368789:android:f25734d3ab5d377baa811c',
-    messagingSenderId: '645394368789',
-    projectId: 'whats-app-f8576',
-    storageBucket: 'whats-app-f8576.firebasestorage.app',
+    apiKey: 'AIzaSyBbFa7Xl_X6880zaLzAFc8GEAlk2zwZzI8',
+    appId: '1:999697171295:android:e15ce5731a9d15a7496cea',
+    messagingSenderId: '999697171295',
+    projectId: 'whatsapp-efd80',
+    storageBucket: 'whatsapp-efd80.firebasestorage.app',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyD460_aTl94SHlLDQiRNiggXr1MXPlMxiM',
-    appId: '1:645394368789:web:d92744ab7ecef844aa811c',
-    messagingSenderId: '645394368789',
-    projectId: 'whats-app-f8576',
-    authDomain: 'whats-app-f8576.firebaseapp.com',
-    storageBucket: 'whats-app-f8576.firebasestorage.app',
-    measurementId: 'G-BR3S0WPR0P',
+    apiKey: 'AIzaSyCDRBioz62d3ulUrBB6O1-ks4DLz3kSlYQ',
+    appId: '1:641001065746:web:ae4698e54c48abc36f77cb',
+    messagingSenderId: '641001065746',
+    projectId: 'whatsapp-clone-e9899',
+    authDomain: 'whatsapp-clone-e9899.firebaseapp.com',
+    storageBucket: 'whatsapp-clone-e9899.firebasestorage.app',
+    measurementId: 'G-68N44RQBQC',
   );
-
 }

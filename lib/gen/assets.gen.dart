@@ -35,6 +35,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/chatIcon.svg
   String get chatIcon => 'assets/icons/chatIcon.svg';
 
+  /// File path: assets/icons/googleIcon.svg
+  String get googleIcon => 'assets/icons/googleIcon.svg';
+
   /// File path: assets/icons/in_activeIcon.svg
   String get inActiveIcon => 'assets/icons/in_activeIcon.svg';
 
@@ -84,6 +87,7 @@ class $AssetsIconsGen {
     arrowBackIcon,
     backgroundChatImg,
     chatIcon,
+    googleIcon,
     inActiveIcon,
     inActiveCameraIcon,
     inactiveCallIcon,
