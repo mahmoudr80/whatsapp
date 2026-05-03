@@ -10,5 +10,6 @@ class AppColors {
  static final Color primaryBlueColor=Color(0xff007AFF);
  static final Color primaryGreyColor=Color(0xffD1D1D6);
  static final Color primaryPurpleColor=Color(0xff4380ff);
+ static final Color navGreyColor=Color(0xff545458);
  static final Color seenPrimaryBlueColor=Color(0xff007AFF).withAlpha(63);
 }
