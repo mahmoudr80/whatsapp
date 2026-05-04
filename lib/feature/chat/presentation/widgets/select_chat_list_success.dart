@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:whatsapp/feature/chat/data/models/chat_model.dart';
@@ -19,17 +20,42 @@ class SelectChatListSuccess extends StatelessWidget {
       separatorBuilder: (context, index) => Divider(indent: 70.w),
       itemBuilder: (context, index) {
         final user = users[index];
+
         return UserItemWidget(
           user: user,
-          onTap: () {
+          onTap: ()  {
+            final chat =  getChat(user);
             Navigator.pushReplacementNamed(
               context,
               Routes.chatDetails,
-              arguments: user,
+              arguments: chat,
             );
           },
         );
       },
     );
   }
+
+  ChatModel getChat(UserModel user){
+    final currentUser=FirebaseAuth.instance.currentUser;
+    final chat = ChatModel(
+        lastMessage: '',
+        participantData: {
+          currentUser?.uid??'':UserModel(name:
+          currentUser?.displayName??'',
+              image: currentUser?.photoURL??'',
+              email: currentUser?.email??''),
+          user.uid??'':
+            UserModel(name:
+                user.name,
+                    image: user.image,
+                    email: user.email),
+
+        },
+        participants: [
+        currentUser?.uid??'',user.uid??''],
+        updatedAt: DateTime.now());
+    return chat;
+  }
+
 }

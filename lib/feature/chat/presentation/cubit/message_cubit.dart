@@ -14,12 +14,12 @@ class MessageCubit extends Cubit<MessageState> {
 final ChatRepo _repo;
   StreamSubscription ? _subscription;
 
-  Future<void> getMessages() async {
+  Future<void> getMessages({required String ?chatId}) async {
     if (isClosed) return;
     emit(MessageLoading());
 
     _subscription?.cancel();
-    _subscription=_repo.getMessages().listen(
+    _subscription=_repo.getMessages(chatId: chatId).listen(
           (response) {
         switch(response){
           case Success(data:final messages):
@@ -32,6 +32,19 @@ final ChatRepo _repo;
       },
       onError: (e) =>emit(MessageFailure(e.toString())) ,
     );
+  }
+
+  Future<void>sendMessage({required String message,
+    required String? chatID}) async {
+    final response=await _repo.send(message: message,
+        chatID: chatID);
+    switch(response){
+      case Success(data:final isSent):
+        if (isClosed) return;
+
+      case Failure(message:final error):
+        print(error);
+    }
   }
 
   @override

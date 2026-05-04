@@ -10,6 +10,8 @@ part 'users_state.dart';
 class UsersCubit extends Cubit<UsersState> {
   final ChatRepo _repo;
   UsersCubit(this._repo) : super(UsersInitial());
+
+
   Future<void> getUsers() async {
     if (isClosed) return;
     emit(UserListLoading());

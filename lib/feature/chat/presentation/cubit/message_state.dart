@@ -15,4 +15,3 @@ final class MessageFailure extends MessageState {
   final String error;
   MessageFailure(this.error);
 }
-

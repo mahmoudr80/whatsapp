@@ -16,7 +16,7 @@ class ChatRepo {
     try{
       await for(final snapshot in  _datasource.getChats()){
       final chats= snapshot.docs.
-     map((doc) => ChatModel.fromFirestore(doc))
+     map((doc) => ChatModel.fromFirestore(doc,doc.id))
           .toList();
       yield Result.success(chats);
       }
@@ -44,9 +44,9 @@ class ChatRepo {
     }
   }
 
-  Stream<Result<List<MessageModel>>>  getMessages()async*{
+  Stream<Result<List<MessageModel>>>  getMessages({required String? chatId})async*{
     try{
-      await for(final snapshot in  _datasource.getMessages())
+      await for(final snapshot in  _datasource.getMessages(chatId: chatId))
       {
         final chat=snapshot.docs.
         map((doc) {
@@ -58,5 +58,15 @@ class ChatRepo {
       yield Result.failure(e.toString());
     }
 
+  }
+
+  Future<Result<bool>>send({required String message,
+    required String ?chatID}) async{
+   try{
+     await _datasource.send(message:message,chatID:chatID);
+     return Result.success(true);
+   }catch(e){
+     return Result.failure(e.toString());
+   }
   }
 }

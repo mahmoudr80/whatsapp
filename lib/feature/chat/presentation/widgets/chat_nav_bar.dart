@@ -1,12 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:whatsapp/feature/chat/presentation/cubit/message_cubit.dart';
 import '../../../../core/theme/app_color.dart';
 import '../../../../gen/assets.gen.dart';
 
-class ChatNavBar extends StatelessWidget {
-  const ChatNavBar({super.key});
+class ChatNavBar extends StatefulWidget {
+  const ChatNavBar({super.key, required this.chatID});
+final String ?chatID;
+  @override
+  State<ChatNavBar> createState() => _ChatNavBarState();
+}
 
+class _ChatNavBarState extends State<ChatNavBar> {
+  TextEditingController messageController = TextEditingController();
+  
+  void writing(){
+    if(messageController.text.trim()!=''){
+      setState(() {
+        
+      });
+    }
+  }
+
+  Future<void> send(String message) async {
+await context.read<MessageCubit>().sendMessage(message: message,
+   chatID:  widget.chatID);
+messageController.clear();
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,6 +40,15 @@ class ChatNavBar extends StatelessWidget {
           SizedBox(width: 15.w),
           Expanded(
             child: TextFormField(
+              onTapOutside: (event) => FocusScope.of(context)
+                .unfocus(),
+              onFieldSubmitted: (message)async {
+                  await send(message);
+              },
+              onChanged: (value) {
+                writing();
+              },
+              controller: messageController,
                 decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 12.w),
               border: OutlineInputBorder(
@@ -45,14 +76,20 @@ class ChatNavBar extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
               ),
-            )),
+            )
+            ),
           ),
           SizedBox(width: 15.w),
           SvgPicture.asset(Assets.icons.activeCameraIcon),
           SizedBox(width: 15.w),
-          SvgPicture.asset(Assets.icons.micIcon),
+          messageController.text.trim()!=''?
+          IconButton(onPressed: () async {
+            await send(messageController.text.trim());
+          }, icon: Icon(Icons.send,color: AppColor.primaryBlueColor,)):SvgPicture.asset(Assets.icons.micIcon),
         ],
       ),
     );
   }
+
+
 }

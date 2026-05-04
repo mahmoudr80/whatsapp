@@ -20,7 +20,7 @@ class WhatsApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: BlocProvider(
-        create: (context) =>  getIt<ChatCubit>()..getChats(),
+        create: (context) =>  getIt<ChatCubit>(),
         child: MaterialApp(
           title: 'WhatsApp',
           debugShowCheckedModeBanner: false,

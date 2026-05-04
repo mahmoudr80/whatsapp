@@ -24,7 +24,7 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
   @override
   void initState() {
     super.initState();
-    context.read<MessageCubit>().getMessages();
+    context.read<MessageCubit>().getMessages(chatId: widget.chat.chatID);
   }
 
   @override
@@ -54,7 +54,9 @@ class _ChatDetailsScreenState extends State<ChatDetailsScreen> {
                 const Expanded(
                   child: MessageListView(),
                 ),
-                const ChatNavBar(),
+                BlocListener<MessageCubit,MessageState>
+                  (listener: (BuildContext context, MessageState state) {  },
+                  child:  ChatNavBar(chatID: widget.chat.chatID)),
               ],
             ),
           ],
